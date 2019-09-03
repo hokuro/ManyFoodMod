@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "meetblock:fishclown"
+  },
+  "result": "meetblock:fishclown_cooked",
+  "experience": 0.35,
+  "cookingtime": 600
+}

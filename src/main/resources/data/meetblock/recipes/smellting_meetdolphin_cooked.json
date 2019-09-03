@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "meetblock:meetdolphin"
+  },
+  "result": "meetblock:meetdolphin_cooked",
+  "experience": 0.35,
+  "cookingtime": 200
+}

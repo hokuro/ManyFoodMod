@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "meetblock:dolpin_meet"
+  },
+  "result": "meetblock:cooked_dolphin",
+  "experience": 0.35,
+  "cookingtime": 100
+}

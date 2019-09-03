@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "meetblock:raw_squid"
+  },
+  "result": "meetblock:cooked_squid",
+  "experience": 0.35,
+  "cookingtime": 600
+}

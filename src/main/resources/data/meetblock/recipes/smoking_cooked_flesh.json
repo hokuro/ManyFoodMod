@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "meetblock:flesh"
+  },
+  "result": "meetblock:cooked_flesh",
+  "experience": 0.35,
+  "cookingtime": 100
+}

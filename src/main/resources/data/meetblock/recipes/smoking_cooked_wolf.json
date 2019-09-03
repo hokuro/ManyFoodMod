@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "meetblock:wolf_meet"
+  },
+  "result": "meetblock:cooked_wolf",
+  "experience": 0.35,
+  "cookingtime": 100
+}

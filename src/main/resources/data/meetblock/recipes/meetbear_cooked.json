@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"MM",
+		"MM"
+	],
+	"key": {
+		"M": {
+			"item": "meetblock:cooked_bear"
+		}
+	},
+	"result": {
+		"item": "meetblock:meetbear_cooked"
+	}
+}

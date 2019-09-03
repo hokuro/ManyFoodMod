@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "meetblock:cat_meet"
+  },
+  "result": "meetblock:cooked_cat",
+  "experience": 0.35,
+  "cookingtime": 200
+}
