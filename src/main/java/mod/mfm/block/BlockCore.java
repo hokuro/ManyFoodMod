@@ -32,7 +32,7 @@ public class BlockCore{
 	public static final String NAME_FISH_FISH = "fishfish";
 	public static final String NAME_FISH_SALMON = "fishsalmon";
 	public static final String NAME_FISH_CLOWN = "fishclown";
-	public static final String NAME_FISH_PUFFER = "fishfuffer";
+	public static final String NAME_FISH_PUFFER = "fishpuffer";
 	public static final String NAME_FISH_TURTLE = "fishturtle";
 	public static final String NAME_FISH_SQUID = "fishsquid";
 	public static final String NAME_MEET_COW_COOKED = "meetcow_cooked";
@@ -52,7 +52,7 @@ public class BlockCore{
 	public static final String NAME_FISH_FISH_COOKED = "fishfish_cooked";
 	public static final String NAME_FISH_SALMON_COOKED = "fishsalmon_cooked";
 	public static final String NAME_FISH_CLOWN_COOKED = "fishclown_cooked";
-	public static final String NAME_FISH_PUFFER_COOKED = "fishfuffer_cooked";
+	public static final String NAME_FISH_PUFFER_COOKED = "fishpuffer_cooked";
 	public static final String NAME_FIHS_TURTLE_COOKED = "fishturtle_cooked";
 	public static final String NAME_FISH_SQUID_COOKED = "fishsquid_cooked";
 

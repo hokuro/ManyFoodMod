@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "mfm:blocks/fish_pufferfish_raw"
-    }
-}
