@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "meetblock:horse_meet"
-  },
-  "result": "meetblock:cooked_horse",
-  "experience": 0.35,
-  "cookingtime": 200
-}

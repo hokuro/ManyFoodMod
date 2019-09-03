@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "meetblock:dolpin_meet"
-  },
-  "result": "meetblock:cooked_dolphin",
-  "experience": 0.35,
-  "cookingtime": 600
-}

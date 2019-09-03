@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "mfm:llamas_meet"
+  },
+  "result": "mfm:cooked_llamas",
+  "experience": 0.35,
+  "cookingtime": 100
+}

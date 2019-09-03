@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:puffer"
+  },
+  "result": "mfm:cooked_puffer",
+  "experience": 0.35,
+  "cookingtime": 200
+}

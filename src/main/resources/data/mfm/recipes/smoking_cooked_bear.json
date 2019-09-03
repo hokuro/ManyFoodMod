@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "mfm:bear_meet"
+  },
+  "result": "mfm:cooked_bear",
+  "experience": 0.35,
+  "cookingtime": 100
+}

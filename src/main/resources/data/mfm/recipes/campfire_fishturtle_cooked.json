@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "mfm:fishturtle"
+  },
+  "result": "mfm:fishturtle_cooked",
+  "experience": 0.35,
+  "cookingtime": 600
+}

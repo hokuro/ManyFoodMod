@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "meetblock:blocks/meet_rotten_flesh_cooke"
-    }
-}

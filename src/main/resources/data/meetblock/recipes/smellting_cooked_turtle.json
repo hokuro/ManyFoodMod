@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "meetblock:raw_turtle"
-  },
-  "result": "meetblock:cooked_turtle",
-  "experience": 0.35,
-  "cookingtime": 200
-}

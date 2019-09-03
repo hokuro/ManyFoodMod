@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "mfm:horse_meet"
+  },
+  "result": "mfm:cooked_horse",
+  "experience": 0.35,
+  "cookingtime": 100
+}

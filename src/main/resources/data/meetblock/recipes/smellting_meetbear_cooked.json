@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "meetblock:meetbear"
-  },
-  "result": "meetblock:meetbear_cooked",
-  "experience": 0.35,
-  "cookingtime": 200
-}

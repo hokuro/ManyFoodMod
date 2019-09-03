@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "meetblock:fox_meet"
-  },
-  "result": "meetblock:cooked_fox",
-  "experience": 0.35,
-  "cookingtime": 600
-}

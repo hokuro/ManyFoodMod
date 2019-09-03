@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "mfm:meetchikin"
+  },
+  "result": "mfm:meetchikin_cooked",
+  "experience": 0.35,
+  "cookingtime": 600
+}

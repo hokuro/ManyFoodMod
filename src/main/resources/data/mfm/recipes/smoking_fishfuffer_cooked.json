@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "mfm:fishfuffer"
+  },
+  "result": "mfm:fishfuffer_cooked",
+  "experience": 0.35,
+  "cookingtime": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mfm:flesh"
+  },
+  "result": "mfm:cooked_flesh",
+  "experience": 0.35,
+  "cookingtime": 200
+}

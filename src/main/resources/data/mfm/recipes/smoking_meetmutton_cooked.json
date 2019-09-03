@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "mfm:meetmutton"
+  },
+  "result": "mfm:meetmutton_cooked",
+  "experience": 0.35,
+  "cookingtime": 100
+}
