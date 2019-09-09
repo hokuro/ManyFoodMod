@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "crashedice",
+  "ingredients": [
+    {
+      "item": "mfm:syrup_blue"
+    },
+    {
+      "item": "mfm:crashedice_none"
+    }
+  ],
+  "result": {
+    "item": "mfm:crashedice_blue"
+  }
+}

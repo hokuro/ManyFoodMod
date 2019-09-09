@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "minecraft:puffer"
+    "item": "minecraft:pufferfish"
   },
   "result": "mfm:cooked_puffer",
   "experience": 0.35,

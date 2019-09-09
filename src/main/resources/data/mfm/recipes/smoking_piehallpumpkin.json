@@ -1,0 +1,9 @@
+{
+   "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "mfm:raw_piehallpumpkin"
+    },
+    "result": "mfm:piehallpumpkin",
+    "experience": 0.1,
+    "cookingtime": 100
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "mfm:block/icecrasher"},
+        "facing=south": { "model": "mfm:block/icecrasher", "y": 180 },
+        "facing=west":  { "model": "mfm:block/icecrasher", "y": 270 },
+        "facing=east":  { "model": "mfm:block/icecrasher", "y": 90 }
+    }
+}

@@ -1,0 +1,9 @@
+{
+   "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "mfm:raw_piehallsalada"
+    },
+    "result": "mfm:piehallsalada",
+    "experience": 0.1,
+    "cookingtime": 100
+}

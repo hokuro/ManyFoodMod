@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "mfm:blocks/cakewmellon_side",
+        "bottom": "mfm:blocks/cakewmellon_bottom",
+        "top": "mfm:blocks/cakewmellon_top",
+        "side": "mfm:blocks/cakewmellon_side",
+        "inside": "mfm:blocks/cakewmellon_inner"
+    },
+    "elements": [
+        {   "from": [ 9, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "uv": [ 9, 1, 15, 15 ], "texture": "#bottom", "cullface": "down" },
+                "up":    { "uv": [ 9, 1, 15, 15 ], "texture": "#top" },
+                "north": { "uv": [ 1, 8,  7, 16 ], "texture": "#side" },
+                "south": { "uv": [ 1, 8,  7, 16 ], "texture": "#side" },
+                "west":  { "uv": [ 1, 8, 15, 16 ], "texture": "#inside" },
+                "east":  { "uv": [ 1, 8, 15, 16 ], "texture": "#side" }
+            }
+        }
+    ]
+}

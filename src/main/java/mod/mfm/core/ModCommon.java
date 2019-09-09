@@ -10,6 +10,11 @@ public final class ModCommon {
 
 	public static final String MOD_NAME = "ManyFoodMod";
 
+	public static final String MOD_GUI_ID_ICECRASHER = "icecrasher";
+	public static final String MOD_GUI_ID_MILLSTONE = "millstone";
+	public static final String MOD_GUI_ID_FREEZER = "freezer";
+	public static final String MOD_GUI_ID_CWORKBENCH = "cworkbench";
+
 
 
 

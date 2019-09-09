@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=north": { "model": "mfm:block/freezer"},
+        "facing=south": { "model": "mfm:block/freezer", "y": 180 },
+        "facing=west":  { "model": "mfm:block/freezer", "y": 270 },
+        "facing=east":  { "model": "mfm:block/freezer", "y": 90 }
+    }
+}
+

@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "mfm:items/icesugarwater_ink_sac"
+    }
+}

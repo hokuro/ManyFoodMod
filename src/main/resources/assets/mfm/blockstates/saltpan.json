@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "level=0":{ "model":"mfm:block/saltpan" },
+        "level=1":{ "model":"mfm:block/saltpan_fill" },
+        "level=2":{ "model":"mfm:block/saltpan_salt" }
+    }
+}

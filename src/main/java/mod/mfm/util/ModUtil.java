@@ -63,4 +63,13 @@ public class ModUtil {
 		}
 		return ret;
 	}
+
+
+	public static int BooleanToInteger(boolean value){
+		return value?1:0;
+	}
+
+	public static boolean IntegerToBoolean(int value){
+		return value==0?false:true;
+	}
 }

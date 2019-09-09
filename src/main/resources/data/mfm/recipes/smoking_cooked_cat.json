@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "mfm:cooked_cat"
+    "item": "mfm:cat_meet"
   },
-  "result": "minecraft:cooked_salmon",
+  "result": "mfm:cooked_cat",
   "experience": 0.35,
   "cookingtime": 100
 }

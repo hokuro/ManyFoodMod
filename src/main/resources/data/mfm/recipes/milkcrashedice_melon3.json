@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "mk_crashedice",
+  "ingredients": [
+    {
+      "item": "mfm:syrup_melon"
+    },
+    {
+      "item": "mfm:crashedice_none"
+    },
+    {
+      "item": "mfm:condencedmilk"
+    }
+  ],
+  "result": {
+    "item": "mfm:mk_crashedice_melon"
+  }
+}

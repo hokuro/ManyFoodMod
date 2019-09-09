@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "flowerdust",
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "key": {
+    "A": {
+      "item": "mfm:flowerdust_oxeydaisy"
+    },
+    "B": {
+      "item": "mfm:flowerdust_azurebluet"
+    },
+    "C": {
+      "item": "mfm:flowerdust_tulip"
+    },
+    "D": {
+      "item": "mfm:flowerdust_dandelion"
+    },
+    "E": {
+      "item": "mfm:flowerdust_sunflower"
+    },
+    "F": {
+      "item": "mfm:flowerdust_orchid"
+    },
+    "G": {
+      "item": "mfm:flowerdust_lilac"
+    },
+    "H": {
+      "item": "mfm:flowerdust_allium"
+    },
+    "I": {
+      "item": "mfm:flowerdust_rose"
+    }
+  },
+  "result": {
+    "item": "mfm:flowerdust_panacea"
+  }
+}

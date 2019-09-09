@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "minecraft:clown"
+    "item": "minecraft:tropical_fish"
   },
   "result": "mfm:cooked_clown",
   "experience": 0.35,

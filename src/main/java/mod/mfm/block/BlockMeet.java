@@ -2,17 +2,12 @@ package mod.mfm.block;
 
 import java.util.Random;
 
-import javax.annotation.Nullable;
-
-import mod.mfm.core.Mod_MeetBlock;
-import mod.mfm.item.ItemCore;
+import mod.mfm.core.Mod_ManyFoods;
 import mod.mfm.network.MessageHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -21,8 +16,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundCategory;
@@ -47,7 +40,7 @@ public class BlockMeet extends Block {
 	}
 
 	public BlockMeet(Item rawitem, boolean cancooked, Block cooked) {
-		super(Properties.create(Mod_MeetBlock.materialMeet)
+		super(Properties.create(Mod_ManyFoods.materialMeet)
 				.sound(SoundType.SLIME)
 				.hardnessAndResistance(0.3F,0.0F)
 				.tickRandomly());
@@ -94,14 +87,6 @@ public class BlockMeet extends Block {
 //		};
 //    }
 
-    @Override
-    public void harvestBlock(World worldIn, PlayerEntity player, BlockPos pos, BlockState state, @Nullable TileEntity te, ItemStack stack) {
-        //super.harvestBlock(worldIn, player, pos, state, te, stack);
-        if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-        	worldIn.removeBlock(pos, false);
-            spawnDrops(state, worldIn, pos, te, player, new ItemStack(rawItem,4));
-        }
-     }
 
     @Override
     public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity playerIn, Hand handIn, BlockRayTraceResult hit) {
@@ -203,12 +188,11 @@ public class BlockMeet extends Block {
     }
 
     public static void onEat(World worldIn, PlayerEntity playerIn, BlockMeet blk, boolean cooked){
-    		playerIn.getFoodStats().addStats(blk.heal, blk.saturationLevel);
-    		if (!cooked || blk.rawItem == ItemCore.cooked_rotten_flesh){
-    			if (worldIn.rand.nextFloat() < 0.7){
-        			playerIn.addPotionEffect(new EffectInstance(Effects.NAUSEA,20*60*4,4));
-        			playerIn.addPotionEffect(new EffectInstance(Effects.HUNGER,20*60*4,4));
-    			}
+    	playerIn.getFoodStats().addStats(blk.heal, blk.saturationLevel);
+    	for(org.apache.commons.lang3.tuple.Pair<EffectInstance, Float> pair : blk.rawItem.getFood().getEffects()) {
+    		if (!worldIn.isRemote && pair.getLeft() != null && worldIn.rand.nextFloat() < pair.getRight()) {
+    			playerIn.addPotionEffect(new EffectInstance(pair.getLeft()));
     		}
+    	}
     }
 }
