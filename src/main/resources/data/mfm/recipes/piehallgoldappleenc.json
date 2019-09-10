@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pie",
+  "ingredients": [
+    {
+      "item": "mfm:piecepiegoldappleenc"
+    },
+    {
+      "item": "mfm:piecepiegoldappleenc"
+    },
+    {
+      "item": "mfm:piecepiegoldappleenc"
+    },
+    {
+      "item": "mfm:piecepiegoldappleenc"
+    },
+    {
+      "item": "mfm:piecepiegoldappleenc"
+    },
+    {
+      "item": "mfm:piecepiegoldappleenc"
+    },
+    {
+      "item": "mfm:piecepiegoldappleenc"
+    }
+  ],
+  "result": {
+    "item": "mfm:piehallgoldappleenc"
+  }
+}

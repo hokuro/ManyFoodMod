@@ -158,7 +158,6 @@ public class ContainerFreezer extends Container {
 					if (ModUtil.compareItemStacks(((Slot)this.inventorySlots.get(INV_FREEZ_IC_S)).getStack(), new ItemStack(Items.BUCKET))){
 						ItemStack stack1 = ((Slot)this.inventorySlots.get(INV_FREEZ_IC_S)).getStack();
 						ItemStack stack2 = ((Slot)this.inventorySlots.get(index)).getStack();
-						ItemStack stack3 = stack1;
 						this.inventorySlots.get(index).putStack(stack1);
 						this.inventorySlots.get(INV_FREEZ_IC_S).putStack(stack2);
 						((Slot)this.inventorySlots.get(INV_FREEZ_IC_S)).onSlotChanged();

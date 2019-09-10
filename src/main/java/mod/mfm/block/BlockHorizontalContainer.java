@@ -1,9 +1,9 @@
 package mod.mfm.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ContainerBlock;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -37,9 +37,9 @@ public abstract class BlockHorizontalContainer extends ContainerBlock {
 //    }
 
 	@Override
-	public void onBlockAdded(BlockState state, World worldIn, BlockPos pos, BlockState oldState, boolean isMoving) {
-        this.setDefaultFacing(worldIn, pos, state);
-    }
+	public BlockState getStateForPlacement(BlockItemUseContext context) {
+		return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
+	}
 
     private void setDefaultFacing(World worldIn, BlockPos pos, BlockState state)
     {
@@ -70,12 +70,6 @@ public abstract class BlockHorizontalContainer extends ContainerBlock {
 
             worldIn.setBlockState(pos, state.with(FACING, enumfacing), 2);
         }
-    }
-
-    @Override
-    public BlockRenderType getRenderType(BlockState state)
-    {
-        return BlockRenderType.MODEL;
     }
 
     @Override

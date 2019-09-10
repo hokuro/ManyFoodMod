@@ -1,5 +1,6 @@
 {
    "type": "minecraft:smelting",
+   "group":"smelting_cakebakedcheese",
     "ingredient": {
         "item": "mfm:cakereacheese"
     },

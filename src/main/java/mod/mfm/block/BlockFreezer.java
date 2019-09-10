@@ -2,7 +2,6 @@ package mod.mfm.block;
 
 import mod.mfm.tileentity.TileEntityFreezer;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -52,12 +51,6 @@ public class BlockFreezer extends BlockHorizontalContainer {
 	}
 
 	@Override
-    public BlockRenderType getRenderType(BlockState state)
-    {
-        return BlockRenderType.INVISIBLE;
-    }
-
-	@Override
 	public TileEntity createNewTileEntity(IBlockReader worldIn) {
 		// TODO 自動生成されたメソッド・スタブ
 		return createTileEntity(null,worldIn);
@@ -71,6 +64,12 @@ public class BlockFreezer extends BlockHorizontalContainer {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+    	int idx = ((Direction)state.getValues().get(FACING)).getIndex();
+	    return colligBoxeis[idx];
+	}
+
+	@Override
+	public VoxelShape getRaytraceShape(BlockState state, IBlockReader worldIn, BlockPos pos) {
     	int idx = ((Direction)state.getValues().get(FACING)).getIndex();
 	    return colligBoxeis[idx];
 	}

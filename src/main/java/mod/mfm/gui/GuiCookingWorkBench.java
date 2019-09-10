@@ -33,7 +33,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class GuiCookingWorkBench extends ContainerScreen<ContainerCookingWorkBench> {
 	private static final int TOPPINGCHANGE_TIMER = 20 * 3;
 	private static final int TOPPING_ONESET = 6;
-    private static final ResourceLocation tex = new ResourceLocation("drf:textures/gui/container/cworkbench.png");
+    private static final ResourceLocation tex = new ResourceLocation("mfm:textures/gui/container/cworkbench.png");
 
     private  OriginalMenu menu;
 
@@ -179,13 +179,13 @@ public class GuiCookingWorkBench extends ContainerScreen<ContainerCookingWorkBen
         {
         	int j = (inv.menuCount() + 3- 1) / 3 - 8;
 
-        	if (scrolle > 1.0D) {
-        		scrolle = 1.0D;
+        	if (p_mouseScrolled_5_ > 1.0D) {
+        		p_mouseScrolled_5_ = 1.0D;
         	}
-        	if (scrolle < -1.0D) {
-        		scrolle = -1.0D;
+        	if (p_mouseScrolled_5_ < -1.0D) {
+        		p_mouseScrolled_5_ = -1.0D;
         	}
-            this.currentScroll = (float)((double)this.currentScroll - (double)scrolle / (double)j);
+            this.currentScroll = (float)((double)this.currentScroll - (double)p_mouseScrolled_5_ / (double)j);
             this.currentScroll = MathHelper.clamp(this.currentScroll, 0.0F, 1.0F);
             inv.scrollTo(this.currentScroll);
         }
@@ -210,7 +210,7 @@ public class GuiCookingWorkBench extends ContainerScreen<ContainerCookingWorkBen
         	int cnting = 0;
         	for (ItemStack ing : ingIcon.get(dispRecipie)){
         		if (!ing.isEmpty()){
-        			this.drawItemStack2(ing, 8 + cnting*18, 16, null);
+        			this.drawItemStack2(ing, 8 + cnting*18, 16, "");
         			cnting++;
         		}
         		timerRecipie++;
@@ -222,7 +222,7 @@ public class GuiCookingWorkBench extends ContainerScreen<ContainerCookingWorkBen
         			}
         		}
         	}
-        	if (topIcon.size() != 0 && !topIcon.get(dispRecipie)[0].isEmpty()){
+        	if (topIcon.size() > 0 && topIcon.get(dispRecipie).length > 0 && !topIcon.get(dispRecipie)[0].isEmpty()){
         		changeRecipie = false;
         		int cntTop = topIcon.get(dispRecipie).length;
         		int drawLeft = 8 + 18 * (6 - ((cntTop-TOPPING_ONESET*dispTopping)>6?6:cntTop));
@@ -230,7 +230,7 @@ public class GuiCookingWorkBench extends ContainerScreen<ContainerCookingWorkBen
         		int lpstart = TOPPING_ONESET*dispTopping;
         		int lpmax =  (cntTop<TOPPING_ONESET+TOPPING_ONESET*dispTopping?cntTop:TOPPING_ONESET+TOPPING_ONESET*dispTopping);
         		for (int i = lpstart; i < lpmax; i++){
-            		this.drawItemStack2(topIcon.get(dispRecipie)[i+TOPPING_ONESET*dispTopping], drawLeft + (i*18), 59, null);
+        			this.drawItemStack2(topIcon.get(dispRecipie)[i], drawLeft + ((i-TOPPING_ONESET*dispTopping)*18), 59, null);
         		}
         		timerTopping++;
         		if (timerTopping > TOPPINGCHANGE_TIMER){
@@ -294,7 +294,7 @@ public class GuiCookingWorkBench extends ContainerScreen<ContainerCookingWorkBen
         GlStateManager.translatef(0.0F, 0.0F, 32.0F);
         this.itemRenderer.zLevel = 200.0F;
         net.minecraft.client.gui.FontRenderer font = stack.getItem().getFontRenderer(stack);
-        if (font == null) font = font;
+        if (font == null) font = this.font;
         this.itemRenderer.renderItemAndEffectIntoGUI(stack, x, y);
         this.itemRenderer.renderItemOverlayIntoGUI(font, stack, x, y, altText);
         this.itemRenderer.zLevel = 0.0F;

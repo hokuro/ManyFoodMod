@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
 public class GuiIceCrasher extends ContainerScreen<ContainerIceCrasher> {
-    private static final ResourceLocation tex = new ResourceLocation("drf:textures/gui/container/icecrasher.png");
+    private static final ResourceLocation tex = new ResourceLocation("mfm:textures/gui/container/icecrasher.png");
     private  PlayerInventory playerInventory;
     private  ContainerIceCrasher tileFlapeMaker;
 

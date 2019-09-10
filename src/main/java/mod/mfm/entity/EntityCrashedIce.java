@@ -22,6 +22,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.fml.network.FMLPlayMessages;
 
 public class EntityCrashedIce extends AbstractEntityIce {
 
@@ -29,6 +30,10 @@ public class EntityCrashedIce extends AbstractEntityIce {
 	public static final int LIMIT_TIME = 12000;
 	private EnumFlapeSyrup flavor;
 	private boolean isMillk;
+
+	public EntityCrashedIce(FMLPlayMessages.SpawnEntity packet, World world) {
+		this(Mod_ManyFoods.RegistryEvents.CRASHEDICE, world);
+	}
 
 	public EntityCrashedIce(EntityType<? extends EntityCrashedIce> etype, World worldIn) {
 		super(etype, worldIn);

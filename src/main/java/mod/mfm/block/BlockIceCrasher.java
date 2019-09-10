@@ -4,7 +4,6 @@ import javax.annotation.Nullable;
 
 import mod.mfm.tileentity.TileEntityIceCrasher;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -94,12 +93,6 @@ public class BlockIceCrasher extends BlockHorizontalContainer {
     }
 
 	@Override
-    public BlockRenderType getRenderType(BlockState state)
-    {
-        return BlockRenderType.INVISIBLE;
-    }
-
-	@Override
 	public TileEntity createNewTileEntity(IBlockReader world) {
 		return createTileEntity(null,world);
 	}
@@ -113,9 +106,23 @@ public class BlockIceCrasher extends BlockHorizontalContainer {
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
     	VoxelShape sh = Block.makeCuboidShape(0,0,0,0,0,0);
     	int idx = ((Direction)state.getValues().get(FACING)).getHorizontalIndex();
-        for(int lp = 0; lp < colligBoxeis[idx].length; lp++){
-        	sh = VoxelShapes.or(sh, colligBoxeis[idx][lp]);
-        }
+    	if (idx >= 0) {
+	        for(int lp = 0; lp < colligBoxeis[idx].length; lp++){
+	        	sh = VoxelShapes.or(sh, colligBoxeis[idx][lp]);
+	        }
+    	}
+	    return sh;
+	}
+
+	@Override
+	public VoxelShape getRaytraceShape(BlockState state, IBlockReader worldIn, BlockPos pos) {
+    	VoxelShape sh = Block.makeCuboidShape(0,0,0,0,0,0);
+    	int idx = ((Direction)state.getValues().get(FACING)).getHorizontalIndex();
+    	if (idx >= 0) {
+	        for(int lp = 0; lp < colligBoxeis[idx].length; lp++){
+	        	sh = VoxelShapes.or(sh, colligBoxeis[idx][lp]);
+	        }
+    	}
 	    return sh;
 	}
 

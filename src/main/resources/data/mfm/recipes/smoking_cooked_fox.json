@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smoking",
+    "group": "smoking_cooking_meet",
   "ingredient": {
     "item": "mfm:fox_meet"
   },

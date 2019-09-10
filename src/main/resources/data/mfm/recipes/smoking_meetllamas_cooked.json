@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smoking",
+    "group": "smoking_cooked_meet",
   "ingredient": {
     "item": "mfm:meetllamas"
   },

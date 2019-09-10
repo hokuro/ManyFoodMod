@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderMillStone extends TileEntityRenderer<TileEntityMillStone> {
 
-	private static final ResourceLocation tex = new ResourceLocation("drf:textures/entity/millstone.png");
+	private static final ResourceLocation tex = new ResourceLocation("mfm:textures/entity/millstone.png");
 
 	private ModelMillStone mainModel = new ModelMillStone();
 	@Override
@@ -37,7 +37,7 @@ public class RenderMillStone extends TileEntityRenderer<TileEntityMillStone> {
 		GlStateManager.rotatef(180,0F,0F,1F);
 		GlStateManager.enableCull();
 		GlStateManager.enableRescaleNormal();
-		float rotate = (float)(4*Math.PI*(((float)te.getField(0)/(float)te.MILL_TIME_MAX)));
+		float rotate = (float)(4*Math.PI*(((float)te.getField(0)/(float)TileEntityMillStone.MILL_TIME_MAX)));
 		this.mainModel.render(1.0F,rotate);
 		GlStateManager.popMatrix();
         if (destroyStage >= 0)

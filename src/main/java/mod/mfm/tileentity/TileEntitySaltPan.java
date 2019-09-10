@@ -27,9 +27,7 @@ public class TileEntitySaltPan extends TileEntity implements ITickableTileEntity
 
 	private int limitTime;
 	private int cntTime;
-	private int level;
 	private NonNullList<ItemStack> inventory;
-	private String customName;
 
 	private static final int[] slotsTop = new int[] {0};
 	private static final int[] slotsBottom = new int[] {0};
@@ -42,7 +40,6 @@ public class TileEntitySaltPan extends TileEntity implements ITickableTileEntity
 	public TileEntitySaltPan(){
 		super(Mod_ManyFoods.RegistryEvents.SALTPAN);
 		inventory = NonNullList.<ItemStack>withSize(SIZE_INVENTORY, ItemStack.EMPTY);
-		this.level = 0;
 		this.clear();
 	}
 
@@ -76,7 +73,6 @@ public class TileEntitySaltPan extends TileEntity implements ITickableTileEntity
 		boolean flag1 = true;
 		BlockState state = this.world.getBlockState(pos);
 		if (!(state.getBlock() instanceof BlockSaltPan)){return;}
-		BlockSaltPan saltPan = (BlockSaltPan)state.getBlock();
 		int level = (int)state.getValues().get(BlockSaltPan.LEVEL);
         if (!this.world.isRemote)
         {
@@ -240,11 +236,6 @@ public class TileEntitySaltPan extends TileEntity implements ITickableTileEntity
 		}
 	}
 
-	public void setCustomInventoryName(String displayName) {
-		this.customName = displayName;
-
-	}
-
 	@Override
 	public int[] getSlotsForFace(Direction side) {
 		return side == Direction.DOWN ? slotsBottom : (side == Direction.UP ? slotsTop : slotsSides);
@@ -289,5 +280,21 @@ public class TileEntitySaltPan extends TileEntity implements ITickableTileEntity
 	        	}
 	        }
 	        return ret;
+	}
+
+	net.minecraftforge.common.util.LazyOptional<? extends net.minecraftforge.items.IItemHandler>[] handlers =
+			net.minecraftforge.items.wrapper.SidedInvWrapper.create(this, Direction.UP, Direction.DOWN, Direction.NORTH);
+
+	@Override
+	public <T> net.minecraftforge.common.util.LazyOptional<T> getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, net.minecraft.util.Direction facing)
+	{
+		if (facing != null && capability == net.minecraftforge.items.CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+			if (facing == Direction.DOWN)
+				return handlers[1].cast();
+			else if (facing == Direction.UP)
+				return handlers[0].cast();
+			else
+				return handlers[2].cast();
+		return super.getCapability(capability, facing);
 	}
 }

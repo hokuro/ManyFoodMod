@@ -177,10 +177,14 @@ public class Mod_ManyFoods {
         public static EntityType<EntityCrashedIce> CRASHEDICE;
         @SubscribeEvent
         public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> etRegistryEvent){
-        	ICECREAM = EntityType.Builder.<EntityIceCream>create(EntityIceCream::new, EntityClassification.MISC).setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(0.81F, 0.2F).build(ModCommon.MOD_ID + ":" + EntityIceCream.NAME);
+        	ICECREAM = EntityType.Builder.<EntityIceCream>create(EntityClassification.MISC).
+        			setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(0.81F, 0.2F)
+        			.setCustomClientFactory(EntityIceCream::new).build(ModCommon.MOD_ID + ":" + EntityIceCream.NAME);
         	ICECREAM.setRegistryName(new ResourceLocation(ModCommon.MOD_ID,EntityIceCream.NAME));
 
-        	CRASHEDICE = EntityType.Builder.<EntityCrashedIce>create(EntityCrashedIce::new, EntityClassification.MISC).setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(0.81F, 0.2F).build(ModCommon.MOD_ID + ":" + EntityCrashedIce.NAME);
+        	CRASHEDICE = EntityType.Builder.<EntityCrashedIce>create( EntityClassification.MISC)
+        			.setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(0.81F, 0.2F)
+        			.setCustomClientFactory(EntityCrashedIce::new).build(ModCommon.MOD_ID + ":" + EntityCrashedIce.NAME);
         	CRASHEDICE.setRegistryName(new ResourceLocation(ModCommon.MOD_ID,EntityCrashedIce.NAME));
         	etRegistryEvent.getRegistry().registerAll(ICECREAM, CRASHEDICE);
         }

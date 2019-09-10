@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "cooked_meet_block",
+	"pattern": [
+		"MM",
+		"MM"
+	],
+	"key": {
+		"M": {
+			"item": "minecraft:cooked_chicken"
+		}
+	},
+	"result": {
+		"item": "mfm:meetchikin_cooked"
+	}
+}

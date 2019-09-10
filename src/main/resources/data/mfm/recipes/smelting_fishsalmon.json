@@ -1,5 +1,6 @@
 {
    "type": "minecraft:smelting",
+   "group":"smelting_cooked_fish",
     "ingredient": {
         "item": "mfm:fishsalmon"
     },

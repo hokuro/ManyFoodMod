@@ -25,7 +25,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraftforge.common.util.LazyOptional;
 
 public class TileEntityMillStone extends LockableTileEntity implements ITickableTileEntity, ICnvertInventory {
 	public static final String REGISTER_NAME = "tileentitymillstone";
@@ -158,6 +157,7 @@ public class TileEntityMillStone extends LockableTileEntity implements ITickable
 		}
 	}
 
+	@Override
 	public int[] getSlotsForFace(Direction side)
 	{
 		return side == Direction.DOWN ? slotsBottom : (side == Direction.UP ? slotsTop : slotsSides);
@@ -180,21 +180,20 @@ public class TileEntityMillStone extends LockableTileEntity implements ITickable
 		return false;
 	}
 
-	net.minecraftforge.items.IItemHandler handlerTop = new net.minecraftforge.items.wrapper.SidedInvWrapper(this, net.minecraft.util.Direction.UP);
-	net.minecraftforge.items.IItemHandler handlerBottom = new net.minecraftforge.items.wrapper.SidedInvWrapper(this, net.minecraft.util.Direction.DOWN);
-	net.minecraftforge.items.IItemHandler handlerSide = new net.minecraftforge.items.wrapper.SidedInvWrapper(this, net.minecraft.util.Direction.WEST);
 
-	@SuppressWarnings("unchecked")
+	net.minecraftforge.common.util.LazyOptional<? extends net.minecraftforge.items.IItemHandler>[] handlers =
+			net.minecraftforge.items.wrapper.SidedInvWrapper.create(this, Direction.UP, Direction.DOWN, Direction.NORTH);
+
 	@Override
 	public <T> net.minecraftforge.common.util.LazyOptional<T> getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, net.minecraft.util.Direction facing)
 	{
 		if (facing != null && capability == net.minecraftforge.items.CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 			if (facing == Direction.DOWN)
-				return (LazyOptional<T>) handlerBottom;
+				return handlers[1].cast();
 			else if (facing == Direction.UP)
-				return (LazyOptional<T>) handlerTop;
+				return handlers[0].cast();
 			else
-				return (LazyOptional<T>) handlerSide;
+				return handlers[2].cast();
 		return super.getCapability(capability, facing);
 	}
 
@@ -222,7 +221,6 @@ public class TileEntityMillStone extends LockableTileEntity implements ITickable
 	public void setInventorySlotContents(int index, ItemStack stack) {
 		this.inventory.set(index, stack);
 		if (!stack.isEmpty()){
-			boolean flag = stack.isItemEqual(this.inventory.get(index)) && ItemStack.areItemStackTagsEqual(stack, this.inventory.get(index));
 
 			if (stack.getCount() > this.getInventoryStackLimit())
 			{

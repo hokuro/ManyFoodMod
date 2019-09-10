@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
 public class GuiMillStone extends ContainerScreen<ContainerMillStone> {
-	  private static final ResourceLocation texture = new ResourceLocation("drf:textures/gui/container/millstone.png");
+	  private static final ResourceLocation texture = new ResourceLocation("mfm:textures/gui/container/millstone.png");
 	    private PlayerInventory playerInventory;
 	    private ContainerMillStone tileMill;
 

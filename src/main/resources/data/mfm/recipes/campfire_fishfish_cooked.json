@@ -1,5 +1,6 @@
 {
   "type": "minecraft:campfire_cooking",
+  "group": "cpm_cooking_fishblock",
   "ingredient": {
     "item": "mfm:fishfish"
   },

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "piecepie",
+  "ingredients": [
+    {
+      "item": "mfm:piehallcaramel"
+    }
+  ],
+  "result": {
+    "item": "mfm:piecepiecaramel",
+    "count":7
+  }
+}

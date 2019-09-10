@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pie",
+  "ingredients": [
+    {
+      "item": "mfm:piecepiemeet"
+    },
+    {
+      "item": "mfm:piecepiemeet"
+    },
+    {
+      "item": "mfm:piecepiemeet"
+    },
+    {
+      "item": "mfm:piecepiemeet"
+    },
+    {
+      "item": "mfm:piecepiemeet"
+    },
+    {
+      "item": "mfm:piecepiemeet"
+    },
+    {
+      "item": "mfm:piecepiemeet"
+    }
+  ],
+  "result": {
+    "item": "mfm:piehallmeet"
+  }
+}

@@ -1,5 +1,6 @@
 {
    "type": "minecraft:smoking",
+    "group": "smoking_pie",
     "ingredient": {
         "item": "mfm:raw_piehallfish"
     },

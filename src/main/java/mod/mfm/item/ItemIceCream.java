@@ -54,15 +54,14 @@ public class ItemIceCream extends ItemResetFood {
 	        if (player.canEat(ConfigValue.icecream.CanEatAllways()))
 	        {
 	            player.setActiveHand(hand);
-	            return new ActionResult(ActionResultType.SUCCESS, itemstack);
+	            return new ActionResult<ItemStack>(ActionResultType.SUCCESS, itemstack);
 	        }
 	        else
 	        {
-	            return new ActionResult(ActionResultType.FAIL, itemstack);
+	            return new ActionResult<ItemStack>(ActionResultType.FAIL, itemstack);
 	        }
 		}else {
 			 Vec3d vec3d = player.getLook(1.0F);
-			 double d0 = 5.0D;
 			 // ほかのエンティティとぶつかるようならスポーンさせない
 			 List<Entity> list = world.getEntitiesInAABBexcluding(player, player.getBoundingBox().expand(vec3d.scale(5.0D)).grow(1.0D), field_219989_a);
 			 if (!list.isEmpty()) {
@@ -90,11 +89,11 @@ public class ItemIceCream extends ItemResetFood {
 						itemstack.shrink(1);
 					}
 				}
-				return new ActionResult(ActionResultType.SUCCESS,itemstack);
+				return new ActionResult<ItemStack>(ActionResultType.SUCCESS,itemstack);
 			 }
 		}
 
-		return new ActionResult(ActionResultType.PASS,itemstack);
+		return new ActionResult<ItemStack>(ActionResultType.PASS,itemstack);
 	}
 
 	@Override

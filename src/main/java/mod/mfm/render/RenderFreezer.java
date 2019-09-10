@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.util.ResourceLocation;
 
 public class RenderFreezer extends TileEntityRenderer<TileEntityFreezer> {
-	private static final ResourceLocation tex = new ResourceLocation("drf:textures/entity/freezer.png");
+	private static final ResourceLocation tex = new ResourceLocation("mfm:textures/entity/freezer.png");
 
 	private ModelFreezer mainModel = new ModelFreezer();
 

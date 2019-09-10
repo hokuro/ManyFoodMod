@@ -211,7 +211,7 @@ public class ContainerCookingWorkBench extends Container {
 		// 許可リスト
 		List<List<ItemStack>> arrow = new ArrayList<List<ItemStack>>();
 		for (int i = 0; i < menu.getKind().getLength(); i++){
-			arrow.add(new ArrayList());
+			arrow.add(new ArrayList<ItemStack>());
 		}
 
 		// 材料を取得

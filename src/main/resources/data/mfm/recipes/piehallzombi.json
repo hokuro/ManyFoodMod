@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "pie",
+  "ingredients": [
+    {
+      "item": "mfm:piecepiezombi"
+    },
+    {
+      "item": "mfm:piecepiezombi"
+    },
+    {
+      "item": "mfm:piecepiezombi"
+    },
+    {
+      "item": "mfm:piecepiezombi"
+    },
+    {
+      "item": "mfm:piecepiezombi"
+    },
+    {
+      "item": "mfm:piecepiezombi"
+    },
+    {
+      "item": "mfm:piecepiezombi"
+    }
+  ],
+  "result": {
+    "item": "mfm:piehallzombi"
+  }
+}

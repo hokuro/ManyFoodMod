@@ -1,5 +1,6 @@
 {
   "type": "minecraft:campfire_cooking",
+  "group": "cpm_cooking_meetblock",
   "ingredient": {
     "item": "mfm:meetrabitt"
   },

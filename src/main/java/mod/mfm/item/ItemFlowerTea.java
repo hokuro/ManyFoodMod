@@ -39,7 +39,7 @@ public class ItemFlowerTea extends PotionItem {
                 		}
             		}else{
             			for (int i = 0; i < effect.length; i++){
-            				entityLiving.addPotionEffect(new EffectInstance(effect[i],20*10,1));
+            				entityLiving.addPotionEffect(new EffectInstance(effect[i],halb.getItem(),halb.getLevel()));
             			}
             		}
             	}

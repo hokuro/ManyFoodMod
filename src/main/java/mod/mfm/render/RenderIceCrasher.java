@@ -10,8 +10,8 @@ import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.util.ResourceLocation;
 
 public class RenderIceCrasher extends TileEntityRenderer<TileEntityIceCrasher> {
-	private static final ResourceLocation tex = new ResourceLocation("drf:textures/entity/icecrasher.png");
-	private static final ResourceLocation tex_flape = new ResourceLocation("drf:textures/entity/crashedice_none.png");
+	private static final ResourceLocation tex = new ResourceLocation("mfm:textures/entity/icecrasher.png");
+	private static final ResourceLocation tex_flape = new ResourceLocation("mfm:textures/entity/crashedice_none.png");
 
 	private ModelIceCrasher mainModel = new ModelIceCrasher();
 	private ModelCrashedIce subModel = new ModelCrashedIce();
@@ -24,10 +24,6 @@ public class RenderIceCrasher extends TileEntityRenderer<TileEntityIceCrasher> {
 
 
 	public void renderFlapeMaker(TileEntityIceCrasher te, double x, double y, double z, float partialTicks, int destroyStage) {
-		double sx,sy,sz = 0.0D;
-		double tx,ty,tz = 0.0D;
-		sx = sy = sz = 0.03125D;
-		tx = ty = tz = 0.5D;
 
         if (destroyStage >= 0)
         {

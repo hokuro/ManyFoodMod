@@ -16,7 +16,7 @@
                   "properties":{
                       "bites": "0"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -24,7 +24,7 @@
                    "count":7
               }
               ],
-              "name": "mfm:piecepiepumpkin"
+              "name": "mfm:piecepiesalada"
           },
           {
               "type": "minecraft:item",
@@ -35,7 +35,7 @@
                   "properties":{
                       "bites": "1"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -43,7 +43,7 @@
                    "count":6
               }
               ],
-              "name": "mfm:piecepiepumpkin"
+              "name": "mfm:piecepiesalada"
           },
           {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   "properties":{
                       "bites": "2"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -62,7 +62,7 @@
                    "count":5
               }
               ],
-              "name": "mfm:piecepiepumpkin"
+              "name": "mfm:piecepiesalada"
           },
           {
               "type": "minecraft:item",
@@ -73,7 +73,7 @@
                   "properties":{
                       "bites": "3"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -81,7 +81,7 @@
                    "count":4
               }
               ],
-              "name": "mfm:piecepiepumpkin"
+              "name": "mfm:piecepiesalada"
           },
           {
               "type": "minecraft:item",
@@ -92,7 +92,7 @@
                   "properties":{
                       "bites": "4"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -100,7 +100,7 @@
                    "count":3
               }
               ],
-              "name": "mfm:piecepiepumpkin"
+              "name": "mfm:piecepiesalada"
           },
           {
               "type": "minecraft:item",
@@ -111,7 +111,7 @@
                   "properties":{
                       "bites": "5"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -119,7 +119,7 @@
                    "count":2
               }
               ],
-              "name": "mfm:piecepiepumpkin"
+              "name": "mfm:piecepiesalada"
           },
           {
               "type": "minecraft:item",
@@ -130,7 +130,7 @@
                   "properties":{
                       "bites": "6"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -138,8 +138,8 @@
                    "count":1
               }
               ],
-              "name": "mfm:piecepiepumpkin"
-          },
+              "name": "mfm:piecepiesalada"
+          }
           ]
       }
       ]

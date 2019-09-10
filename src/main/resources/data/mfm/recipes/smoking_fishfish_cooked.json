@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smoking",
+    "group": "smelting_cooked_fish",
   "ingredient": {
     "item": "mfm:fishfish"
   },

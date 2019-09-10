@@ -1,5 +1,6 @@
 {
 	"type": "minecraft:crafting_shaped",
+  "group": "cooked_fish_block",
 	"pattern": [
 		"MM",
 		"MM"

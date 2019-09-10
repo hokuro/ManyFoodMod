@@ -1,5 +1,6 @@
 {
    "type": "minecraft:smelting",
+   "group":"smoking_pizza",
     "ingredient": {
         "item": "mfm:raw_pizza"
     },

@@ -15,7 +15,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
 public class GuiFreezer  extends ContainerScreen<ContainerFreezer> {
-    private static final ResourceLocation tex = new ResourceLocation("drf:textures/gui/container/freezer.png");
+    private static final ResourceLocation tex = new ResourceLocation("mfm:textures/gui/container/freezer.png");
     private ContainerFreezer tileFreezer;
 
 	public GuiFreezer(ContainerFreezer container, PlayerInventory playerInv, ITextComponent title) {

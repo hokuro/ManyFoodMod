@@ -75,7 +75,6 @@ public class CookingMenu extends OriginalMenu {
 	@Override
 	public boolean checkServe(IInventory inv){
 		ItemStack[] ings = new ItemStack[OriginalMenuKind.COOKING.getLength()];
-		ItemStack add;
 		for (int i = 0; i < OriginalMenuKind.COOKING.getLength(); i++){
 			ings[i] = inv.getStackInSlot(i);
 		}
@@ -275,86 +274,72 @@ public class CookingMenu extends OriginalMenu {
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecepie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_pie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecechocopie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_chocopie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecesaladapie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_salada_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecemeetpie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_meetpie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecefishpie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_fishpie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecepumpukinpie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_pumpkinpie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecezombipie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_zombipei_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_pieceapplepie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_applepie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_pieceblackpie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_black_pie,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piececaramelpie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_caramelpie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_pieceberrypie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_berrypie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecekelppie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_kelppie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecegoldapplepie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_goldapplepie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_piecegoldappleencpie,7),
 				new ItemStack[]{
 						new ItemStack(BlockCore.block_goldappleencpie_hall,1)
-				},
-				new ItemStack[]{}));
+				}));
 
 		// チョコケーキ
 		registerMenu(new CookingMenu(new ItemStack(BlockCore.block_choco_cake,1),
@@ -659,7 +644,7 @@ public class CookingMenu extends OriginalMenu {
 		}
 
 		// アイスキャンディの素
-		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_icecandy_none,1),
+		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_sugar_water_none,1),
 				new ItemStack[]{
 						PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION,1), Potions.WATER),
 						new ItemStack(Items.STICK,1)
@@ -673,7 +658,8 @@ public class CookingMenu extends OriginalMenu {
 						new ItemStack[]{
 								new ItemStack(Items.SUGAR,2),
 								new ItemStack(Items.STICK,1)
-						}
+						},
+						EnumFlapeSyrup.SYRUP_NONE.getBaseItem()
 						));
 			}
 		}
@@ -1089,8 +1075,8 @@ public class CookingMenu extends OriginalMenu {
 				new ItemStack[]{
 						new ItemStack(Items.BEEF,1),
 						new ItemStack(Items.PORKCHOP,1),
-						new ItemStack(Items.MUSHROOM_STEW,1),
-						new ItemStack(Items.CHEST_MINECART,1),
+						new ItemStack(Items.MUTTON,1),
+						new ItemStack(Items.CHICKEN,1),
 						new ItemStack(ItemCore.meet_wolf,1),
 						new ItemStack(ItemCore.meet_cat,1),
 						new ItemStack(ItemCore.meet_horse,1),
@@ -1124,8 +1110,8 @@ public class CookingMenu extends OriginalMenu {
 				new ItemStack[]{
 						new ItemStack(Items.BEEF,1),
 						new ItemStack(Items.PORKCHOP,1),
-						new ItemStack(Items.MUSHROOM_STEW,1),
-						new ItemStack(Items.CHEST_MINECART,1),
+						new ItemStack(Items.MUTTON,1),
+						new ItemStack(Items.CHICKEN,1),
 						new ItemStack(ItemCore.meet_wolf,1),
 						new ItemStack(ItemCore.meet_cat,1),
 						new ItemStack(ItemCore.meet_horse,1),

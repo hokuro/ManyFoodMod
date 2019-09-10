@@ -31,6 +31,7 @@ public class OriginalRecipie {
 		addRecipie(new ItemStack(Blocks.ROSE_BUSH,1), new ItemStack(ItemCore.item_flowerdust_rose,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.PEONY,1), new ItemStack(ItemCore.item_flowerdust_peony,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.LILAC,1), new ItemStack(ItemCore.item_flowerdust_lilac,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
+		addRecipie(new ItemStack(Items.LILAC,1), new ItemStack(ItemCore.item_flowerdust_lilac,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.ALLIUM,1), new ItemStack(ItemCore.item_flowerdust_allium,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.PINK_TULIP,1), new ItemStack(ItemCore.item_flowerdust_tulip,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.ORANGE_TULIP,1), new ItemStack(ItemCore.item_flowerdust_tulip,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
@@ -71,10 +72,7 @@ public class OriginalRecipie {
 		addRecipie(new ItemStack(ItemCore.meet_dolphin), new ItemStack(ItemCore.item_milldolphin,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(ItemCore.raw_flesh), new ItemStack(ItemCore.item_millflesh,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(ItemCore.raw_turtle), new ItemStack(ItemCore.item_millturtle,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
-		addRecipie(new ItemStack(Items.COD), new ItemStack(ItemCore.item_millcod,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Items.SALMON), new ItemStack(ItemCore.item_millsalmon,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
-		addRecipie(new ItemStack(Items.TROPICAL_FISH), new ItemStack(ItemCore.item_millclown,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
-		addRecipie(new ItemStack(Items.PUFFERFISH), new ItemStack(ItemCore.item_millpuffer,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(ItemCore.raw_squid), new ItemStack(ItemCore.item_millsquid,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Items.CORNFLOWER), new ItemStack(ItemCore.item_flowerdust_corm,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Items.WITHER_ROSE), new ItemStack(ItemCore.item_flowerdust_witherrose,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
@@ -111,11 +109,12 @@ public class OriginalRecipie {
 		addRecipie(new ItemStack(Blocks.ACACIA_LEAVES), new ItemStack(ItemCore.item_greendust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.BIRCH_LEAVES), new ItemStack(ItemCore.item_greendust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.DARK_OAK_LEAVES), new ItemStack(ItemCore.item_greendust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
+		addRecipie(new ItemStack(Blocks.OAK_LEAVES), new ItemStack(ItemCore.item_greendust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.JUNGLE_LEAVES), new ItemStack(ItemCore.item_greendust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
-		addRecipie(new ItemStack(Blocks.DARK_OAK_LEAVES), new ItemStack(ItemCore.item_greendust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.SPRUCE_LEAVES), new ItemStack(ItemCore.item_greendust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Items.DRIED_KELP), new ItemStack(ItemCore.item_kelpdust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
-		addRecipie(new ItemStack(Items.DRIED_KELP_BLOCK), new ItemStack(ItemCore.item_kelpdust,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
+		addRecipie(new ItemStack(Items.DRIED_KELP_BLOCK), new ItemStack(ItemCore.item_kelpdust,4), ORIGINAL_RECIPIES.RECIPIE_MILLING);
+
 
 
 		// Chasshing

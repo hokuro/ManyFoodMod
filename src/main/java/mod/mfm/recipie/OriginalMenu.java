@@ -65,7 +65,6 @@ public abstract class OriginalMenu implements IOriginalMenu {
 
 	public boolean checkServe(IInventory inv){
 		ItemStack[] ings = new ItemStack[inv.getSizeInventory()];
-		ItemStack add;
 		for (int i = 0; i < inv.getSizeInventory(); i++){
 			ings[i] = inv.getStackInSlot(i);
 		}

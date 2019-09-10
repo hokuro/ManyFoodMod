@@ -44,7 +44,7 @@ public class BlockSaltPan extends ContainerBlock {
 	}
 
 	@Override
-	   public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
 		VoxelShape sh1 = AABB_LEGS;
 		sh1 = VoxelShapes.or(sh1, AABB_WALL_NORTH);
 		sh1 = VoxelShapes.or(sh1, AABB_WALL_SOUTH);
@@ -52,6 +52,17 @@ public class BlockSaltPan extends ContainerBlock {
 		sh1 = VoxelShapes.or(sh1, AABB_WALL_WEST);
 	    return sh1;
 	}
+
+	@Override
+	public VoxelShape getRaytraceShape(BlockState state, IBlockReader worldIn, BlockPos pos) {
+		VoxelShape sh1 = AABB_LEGS;
+		sh1 = VoxelShapes.or(sh1, AABB_WALL_NORTH);
+		sh1 = VoxelShapes.or(sh1, AABB_WALL_SOUTH);
+		sh1 = VoxelShapes.or(sh1, AABB_WALL_EAST);
+		sh1 = VoxelShapes.or(sh1, AABB_WALL_WEST);
+	    return sh1;
+	}
+
 
     @Override
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {

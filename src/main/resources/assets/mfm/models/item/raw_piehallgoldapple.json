@@ -1,6 +1,6 @@
 ﻿{
     "parent": "item/handheld",
     "textures": {
-        "layer0": "mfm:items/raw_piehallgldapple"
+        "layer0": "mfm:items/raw_piehallgoldapple"
     }
 }

@@ -16,7 +16,7 @@
                   "properties":{
                       "bites": "0"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -35,7 +35,7 @@
                   "properties":{
                       "bites": "1"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -54,7 +54,7 @@
                   "properties":{
                       "bites": "2"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -73,7 +73,7 @@
                   "properties":{
                       "bites": "3"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -92,7 +92,7 @@
                   "properties":{
                       "bites": "4"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -111,7 +111,7 @@
                   "properties":{
                       "bites": "5"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -130,7 +130,7 @@
                   "properties":{
                       "bites": "6"
                   }
-              },
+              }
               ],
               "functions": [
               {
@@ -139,7 +139,7 @@
               }
               ],
               "name": "mfm:piecepiekelp"
-          },
+          }
           ]
       }
       ]

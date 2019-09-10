@@ -1,0 +1,10 @@
+{
+   "type": "minecraft:smoking",
+   "group":"smoking_pizza",
+    "ingredient": {
+        "item": "mfm:raw_pizza"
+    },
+    "result": "mfm:pizza",
+    "experience": 0.1,
+    "cookingtime": 100
+}

@@ -2,7 +2,6 @@ package mod.mfm.block;
 
 import mod.mfm.tileentity.TileEntityMillStone;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ContainerBlock;
 import net.minecraft.entity.player.PlayerEntity;
@@ -35,17 +34,16 @@ public class BlockMillStone extends ContainerBlock {
 	    return colligeBox;
 	}
 
+	@Override
+	public VoxelShape getRaytraceShape(BlockState state, IBlockReader worldIn, BlockPos pos) {
+	    return colligeBox;
+	}
+
 
 	@Override
 	public TileEntity createNewTileEntity(IBlockReader world) {
 		return new TileEntityMillStone();
 	}
-
-	@Override
-    public BlockRenderType getRenderType(BlockState state)
-    {
-        return BlockRenderType.INVISIBLE;
-    }
 
     @Override
     public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity playerIn, Hand handIn, BlockRayTraceResult hit) {

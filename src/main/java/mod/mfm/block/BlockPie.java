@@ -52,7 +52,7 @@ public class BlockPie extends CakeBlock {
 
 	@Override
 	public void onBlockClicked(BlockState state, World worldIn, BlockPos pos, PlayerEntity playerIn) {
-        this.eatPie(worldIn, pos, worldIn.getBlockState(pos), playerIn);
+        //this.eatPie(worldIn, pos, worldIn.getBlockState(pos), playerIn);
     }
 
     private void eatPie(World worldIn, BlockPos pos, BlockState state, PlayerEntity player)

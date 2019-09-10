@@ -5,8 +5,6 @@ import mod.mfm.core.Mod_ManyFoods;
 import mod.mfm.inventory.ContainerFreezer;
 import mod.mfm.inventory.ICnvertInventory;
 import mod.mfm.item.ItemIceCandy;
-import mod.mfm.item.ItemIceCreamMix;
-import mod.mfm.item.ItemSugarWater;
 import mod.mfm.network.MessageHandler;
 import mod.mfm.recipie.OriginalRecipie;
 import mod.mfm.recipie.OriginalRecipie.ORIGINAL_RECIPIES;
@@ -93,9 +91,6 @@ public class TileEntityFreezer extends LockableTileEntity implements ITickableTi
 	private String freezerCustomName;
 	private boolean isOpen;
 	private boolean canSounds;
-	private Direction facing;
-	private int numPlayersUsing;
-	private int ticksSinceSync;
 	public float prevLidAngle;
 	public float lidAngle;
 
@@ -454,7 +449,7 @@ public class TileEntityFreezer extends LockableTileEntity implements ITickableTi
 
 	@Override
 	public ITextComponent getName() {
-		return new TranslationTextComponent(this.freezerCustomName);
+		return new TranslationTextComponent("container.freezer");
 	}
 
 	@Override
@@ -693,23 +688,10 @@ public class TileEntityFreezer extends LockableTileEntity implements ITickableTi
 				return false;
 			}else if (index > 26)
 			{
-				Item item = stack.getItem();
 				return true;
 			}
 		}
 
-		return false;
-	}
-
-
-	private boolean canFreezeing(ItemStack stack){
-		Item item = stack.getItem();
-
-		if ((stack.isEmpty()) &&
-			((item instanceof ItemIceCreamMix) ||
-			 (item instanceof ItemSugarWater))){
-			return true;
-		}
 		return false;
 	}
 
@@ -761,5 +743,21 @@ public class TileEntityFreezer extends LockableTileEntity implements ITickableTi
 	@Override
 	protected ITextComponent getDefaultName() {
 		return this.getName();
+	}
+
+	net.minecraftforge.common.util.LazyOptional<? extends net.minecraftforge.items.IItemHandler>[] handlers =
+			net.minecraftforge.items.wrapper.SidedInvWrapper.create(this, Direction.UP, Direction.DOWN, Direction.NORTH);
+
+	@Override
+	public <T> net.minecraftforge.common.util.LazyOptional<T> getCapability(net.minecraftforge.common.capabilities.Capability<T> capability, net.minecraft.util.Direction facing)
+	{
+		if (facing != null && capability == net.minecraftforge.items.CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+			if (facing == Direction.DOWN)
+				return handlers[1].cast();
+			else if (facing == Direction.UP)
+				return handlers[0].cast();
+			else
+				return handlers[2].cast();
+		return super.getCapability(capability, facing);
 	}
 }

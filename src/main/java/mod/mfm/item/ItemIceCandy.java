@@ -16,7 +16,6 @@ import net.minecraft.world.World;
 public class ItemIceCandy extends Item {
 
 	private final EnumFlapeSyrup flavor;
-	private final float attackDamage = 0.5F;
 
 	public ItemIceCandy(EnumFlapeSyrup syrup, Item.Properties property) {
 		super(property);
@@ -30,7 +29,6 @@ public class ItemIceCandy extends Item {
         if (entityLiving instanceof PlayerEntity)
         {
             PlayerEntity player = (PlayerEntity)entityLiving;
-            EnumFlapeSyrup syrup = ((ItemIceCandy)stack.getItem()).getFlavor();
             player.getFoodStats().addStats(this.getFood().getHealing(), this.getFood().getSaturation());
             worldIn.playSound((PlayerEntity)player, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
             this.onFoodEaten(stack, worldIn, player);
