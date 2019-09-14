@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "obon",
+  "pattern": [
+    "W W",
+    "WWW"
+  ],
+  "key": {
+    "W": [
+      {
+        "item": "minecraft:oak_slab"
+      },
+      {
+        "item": "minecraft:spruce_slab"
+      },
+      {
+        "item": "minecraft:birch_slab"
+      },
+      {
+        "item": "minecraft:jungle_slab"
+      },
+      {
+        "item": "minecraft:acacia_slab"
+      },
+      {
+        "item": "minecraft:dark_oak_slab"
+      }
+    ]
+  },
+  "result": {
+    "item": "mfm:obon",
+    "count": 1
+  }
+}
