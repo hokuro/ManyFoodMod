@@ -2,6 +2,7 @@ package mod.mfm.network;
 
 import mod.mfm.core.ModCommon;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.network.NetworkDirection;
@@ -27,6 +28,7 @@ public class MessageHandler {
 		HANDLER.registerMessage(disc++, MessageIceCrasherUpdate.class, MessageIceCrasherUpdate::encode, MessageIceCrasherUpdate::decode, MessageIceCrasherUpdate.Handler::handle);
 		HANDLER.registerMessage(disc++, MessageMillStoneUpdate.class, MessageMillStoneUpdate::encode, MessageMillStoneUpdate::decode, MessageMillStoneUpdate.Handler::handle);
 		HANDLER.registerMessage(disc++, MessageFreezer.class, MessageFreezer::encode, MessageFreezer::decode, MessageFreezer.Handler::handle);
+		HANDLER.registerMessage(disc++, MessageUpdateObonInventory.class, MessageUpdateObonInventory::encode, MessageUpdateObonInventory::decode, MessageUpdateObonInventory.Handler::handle);
 
 	}
 
@@ -43,30 +45,44 @@ public class MessageHandler {
 		HANDLER.sendToServer(new MessageSelectMenu(scroll,selectslot));
 	}
 
-	public static void Send_MessageFreezer(int[] timerCnt, int timerFule, int timerIce, int tankCnt, boolean isInfinit,
+	public static boolean Send_MessageFreezer(int[] timerCnt, int timerFule, int timerIce, int tankCnt, boolean isInfinit,
 			BlockPos pos) {
 		try {
 			HANDLER.sendToServer(new MessageFreezer(timerCnt, timerFule, timerIce, tankCnt, isInfinit, pos));
 		}catch(Throwable e){
 
+			return false;
 		}
+		return true;
 	}
 
-	public static void Send_MessageIceCrasherUpdate(int crushTime, boolean isRun, BlockPos pos) {
+	public static boolean Send_MessageIceCrasherUpdate(int crushTime, boolean isRun, BlockPos pos) {
 		try {
 			HANDLER.sendToServer(new MessageIceCrasherUpdate(crushTime, isRun, pos));
 		}catch(Throwable e){
 
+			return false;
 		}
-
+		return true;
 	}
 
-	public static void Send_MessageMillStoneUpdate(int millTime, boolean isRun, BlockPos pos) {
+	public static boolean Send_MessageMillStoneUpdate(int millTime, boolean isRun, BlockPos pos) {
 		try {
 			HANDLER.sendToServer(new MessageMillStoneUpdate(millTime, isRun, pos));
 		}catch(Throwable e){
-
+			return false;
 		}
+		return true;
+	}
+
+	public static boolean Send_MessageUpdateObonInventory(int id, ItemStack itemStack) {
+		try
+		{
+			HANDLER.sendToServer(new MessageUpdateObonInventory(id, itemStack));
+		}catch(Throwable e) {
+			return false;
+		}
+		return true;
 	}
 
 }

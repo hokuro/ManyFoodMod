@@ -7,6 +7,7 @@ import mod.mfm.block.BlockCore;
 import mod.mfm.config.ConfigValue;
 import mod.mfm.entity.EntityCrashedIce;
 import mod.mfm.entity.EntityIceCream;
+import mod.mfm.entity.EntityObon;
 import mod.mfm.event.EventHandler;
 import mod.mfm.group.ItemGroupColdFood;
 import mod.mfm.group.ItemGroupPieCakes;
@@ -25,6 +26,7 @@ import mod.mfm.render.RenderFreezer;
 import mod.mfm.render.RenderIceCrasher;
 import mod.mfm.render.RenderIceCream;
 import mod.mfm.render.RenderMillStone;
+import mod.mfm.render.RenderObon;
 import mod.mfm.sounds.SoundManager;
 import mod.mfm.tileentity.TileEntityFreezer;
 import mod.mfm.tileentity.TileEntityIceCrasher;
@@ -104,6 +106,7 @@ public class Mod_ManyFoods {
 	public void registRender(){
 		RenderingRegistry.registerEntityRenderingHandler(EntityIceCream.class, RenderIceCream::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityCrashedIce.class, RenderCrashedIce::new);
+		RenderingRegistry.registerEntityRenderingHandler(EntityObon.class, RenderObon::new);
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFreezer.class, new RenderFreezer());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityMillStone.class, new RenderMillStone());
@@ -175,18 +178,25 @@ public class Mod_ManyFoods {
 
         public static EntityType<EntityIceCream> ICECREAM;
         public static EntityType<EntityCrashedIce> CRASHEDICE;
+        public static EntityType<EntityObon> OBON;
         @SubscribeEvent
         public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> etRegistryEvent){
-        	ICECREAM = EntityType.Builder.<EntityIceCream>create(EntityClassification.MISC).
+        	ICECREAM = EntityType.Builder.<EntityIceCream>create(EntityIceCream::new,EntityClassification.MISC).
         			setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(0.81F, 0.2F)
         			.setCustomClientFactory(EntityIceCream::new).build(ModCommon.MOD_ID + ":" + EntityIceCream.NAME);
         	ICECREAM.setRegistryName(new ResourceLocation(ModCommon.MOD_ID,EntityIceCream.NAME));
 
-        	CRASHEDICE = EntityType.Builder.<EntityCrashedIce>create( EntityClassification.MISC)
+        	CRASHEDICE = EntityType.Builder.<EntityCrashedIce>create(EntityCrashedIce::new,EntityClassification.MISC)
         			.setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(0.81F, 0.2F)
         			.setCustomClientFactory(EntityCrashedIce::new).build(ModCommon.MOD_ID + ":" + EntityCrashedIce.NAME);
         	CRASHEDICE.setRegistryName(new ResourceLocation(ModCommon.MOD_ID,EntityCrashedIce.NAME));
-        	etRegistryEvent.getRegistry().registerAll(ICECREAM, CRASHEDICE);
+
+        	OBON = EntityType.Builder.<EntityObon>create(EntityObon::new, EntityClassification.MISC)
+        			.setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(1.0F, 1.0F)
+        			.setCustomClientFactory(EntityObon::new).build(ModCommon.MOD_ID + ":" + EntityObon.NAME);
+        	OBON.setRegistryName(new ResourceLocation(ModCommon.MOD_ID,EntityObon.NAME));
+
+        	etRegistryEvent.getRegistry().registerAll(ICECREAM, CRASHEDICE, OBON);
         }
 
     	public static TileEntityType<?> SALTPAN;

@@ -30,12 +30,6 @@ public abstract class BlockHorizontalContainer extends ContainerBlock {
 		return null;
 	}
 
-
-//    public AxisAlignedBB getBoundingBox(BlockState state, IBlockAccess source, BlockPos pos)
-//    {
-//    	return getRealBoundingBox(state);
-//    }
-
 	@Override
 	public BlockState getStateForPlacement(BlockItemUseContext context) {
 		return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());

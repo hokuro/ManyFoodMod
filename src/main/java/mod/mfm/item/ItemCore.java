@@ -47,6 +47,7 @@ public class ItemCore {
 	public static final String NAME_HUNGERDRAG = "hungerdrag";
 
 	public static final String NAME_ICEFOOD_BOWL = "icefoodbowl";// アイスの器
+	public static final String NAME_OBON = "obon";
 
 
 	public static final String NAME_CHOCO = "chocolate";//	チョコレート
@@ -469,6 +470,7 @@ public class ItemCore {
 			NAME_COOKED_FLESH,
 			NAME_COOKED_FOX,
 			NAME_HUNGERDRAG,
+			NAME_OBON,
 			NAME_ICEFOOD_BOWL,
 			NAME_CHOCO,
 			NAME_WHITECHOCO,
@@ -864,6 +866,7 @@ public class ItemCore {
 	public static Item hungerdrag = new ItemHungerDrag((new Item.Properties()).group(ItemGroup.FOOD)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_HUNGERDRAG));
 
 	public static Item item_icefoodbowl            = new Item(new Item.Properties().group(Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_ICEFOOD_BOWL));
+	public static Item item_obon                  = new ItemObon(new Item.Properties().group(Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_OBON));
 	public static Item item_choco                 = new ItemFoodPieCakes(new Item.Properties().group(Mod_ManyFoods.tabPieCakes).food(ItemFoods.food_choco)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_CHOCO));
 	public static Item item_whitechoco            = new ItemFoodPieCakes(new Item.Properties().group(Mod_ManyFoods.tabPieCakes).food(ItemFoods.food_whitechoco)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_WHITECHOCO));
 
@@ -1281,6 +1284,7 @@ public class ItemCore {
 			{put(NAME_HUNGERDRAG, hungerdrag);}
 
 			{put(NAME_ICEFOOD_BOWL, item_icefoodbowl);}
+			{put(NAME_OBON, item_obon);}
 			{put(NAME_CHOCO, item_choco);}
 			{put(NAME_WHITECHOCO, item_whitechoco);}
 
