@@ -192,7 +192,7 @@ public class Mod_ManyFoods {
         	CRASHEDICE.setRegistryName(new ResourceLocation(ModCommon.MOD_ID,EntityCrashedIce.NAME));
 
         	OBON = EntityType.Builder.<EntityObon>create(EntityObon::new, EntityClassification.MISC)
-        			.setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(1.0F, 1.0F)
+        			.setTrackingRange(80).setUpdateInterval(5).setShouldReceiveVelocityUpdates(true).size(0.7F, 0.2F)
         			.setCustomClientFactory(EntityObon::new).build(ModCommon.MOD_ID + ":" + EntityObon.NAME);
         	OBON.setRegistryName(new ResourceLocation(ModCommon.MOD_ID,EntityObon.NAME));
 
