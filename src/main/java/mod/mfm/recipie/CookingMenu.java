@@ -561,7 +561,7 @@ public class CookingMenu extends OriginalMenu {
 
 
 		// アイスクリームの素
-		for(EnumIceFlavor flavor : EnumIceFlavor.values()) {
+		for(EnumIceFlavor flavor : EnumIceFlavor.values) {
 			if (flavor.getIcemix() != null) {
 				registerMenu(new CookingMenu(new ItemStack(flavor.getIcemix(),1),
 						new ItemStack[]{
@@ -1285,6 +1285,13 @@ public class CookingMenu extends OriginalMenu {
 						},
 				new ItemStack[]{
 						new ItemStack(ItemCore.item_flowerdust_panacea,1)
+				}));
+		registerMenu(new CookingMenu(new ItemStack(ItemCore.item_flowertea_lily,1),
+				new ItemStack[]{
+						PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION,1), Potions.WATER),
+						},
+				new ItemStack[]{
+						new ItemStack(ItemCore.item_flowerdust_lily,1)
 				}));
     }
 }

@@ -421,6 +421,7 @@ public class ItemCore {
 	public static final String NAME_DUST_FLOWER_PEONY="flowerdust_peony";
 	public static final String NAME_DUST_FLOWER_PANACEA="flowerdust_panacea";
 	public static final String NAME_DUST_FLOWER_CORM = "flowerdust_corm";
+	public static final String NAME_DUST_FLOWER_LILY = "flowerdust_lily";
 	public static final String NAME_DUST_FLOWER_WITHERROSE="flowerdust_witherrose";
 	public static final String NAME_DUST_FLOWER_CORAL = "flowerdust_coral";
 
@@ -438,6 +439,7 @@ public class ItemCore {
 	public static final String NAME_TEA_FLOWER_PEONY="flowertea_peony";
 	public static final String NAME_TEA_FLOWER_PANACEA="flowertea_panacea";
 	public static final String NAME_TEA_FLOWER_CORM = "flowertea_corm";
+	public static final String NAME_TEA_FLOWER_LILY = "flowertea_lily";
 	public static final String NAME_TEA_FLOWER_WITHERROSE ="flowertea_witherrose";
 	public static final String NAME_TEA_FLOWER_CORAL = "flowertea_coral";
 
@@ -819,6 +821,7 @@ public class ItemCore {
 			NAME_DUST_FLOWER_PEONY,
 			NAME_DUST_FLOWER_PANACEA,
 			NAME_DUST_FLOWER_CORM,
+			NAME_DUST_FLOWER_LILY,
 			NAME_DUST_FLOWER_WITHERROSE,
 			NAME_DUST_FLOWER_CORAL,
 			NAME_TEA_FLOWER_DANDELION,
@@ -835,6 +838,7 @@ public class ItemCore {
 			NAME_TEA_FLOWER_PANACEA,
 			NAME_TEA_FLOWER_CORM,
 			NAME_TEA_FLOWER_WITHERROSE,
+			NAME_TEA_FLOWER_LILY,
 			NAME_TEA_FLOWER_CORAL,
 			NAME_DUST_GREENDUST,
 			NAME_DUST_KELPDUST
@@ -1230,7 +1234,8 @@ public class ItemCore {
 	public static Item item_flowerdust_rose            = new ItemFlowerDust(EnumFlowerHalb.ROSE, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_ROSE));
 	public static Item item_flowerdust_peony           = new ItemFlowerDust(EnumFlowerHalb.PEONY, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_PEONY));
 	public static Item item_flowerdust_panacea         = new ItemFlowerDust(EnumFlowerHalb.PANACEA, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_PANACEA));
-	public static Item item_flowerdust_corm            = new ItemFlowerDust(EnumFlowerHalb.CORM, new Item.Properties().group(Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_CORM));
+	public static Item item_flowerdust_corm            = new ItemFlowerDust(EnumFlowerHalb.CORN, new Item.Properties().group(Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_CORM));
+	public static Item item_flowerdust_lily            = new ItemFlowerDust(EnumFlowerHalb.LILY, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_LILY));
 	public static Item item_flowerdust_witherrose      = new ItemFlowerDust(EnumFlowerHalb.WITHERROSE, new Item.Properties().group(Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_WITHERROSE));
 	public static Item item_flowerdust_coral           = new ItemFlowerDust(EnumFlowerHalb.CORAL, new Item.Properties().group(Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_DUST_FLOWER_CORAL));
 
@@ -1246,7 +1251,8 @@ public class ItemCore {
 	public static Item item_flowertea_rose             = new ItemFlowerTea(EnumFlowerHalb.ROSE, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_ROSE));
 	public static Item item_flowertea_peony            = new ItemFlowerTea(EnumFlowerHalb.PEONY, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_PEONY));
 	public static Item item_flowertea_panacea          = new ItemFlowerTea(EnumFlowerHalb.PANACEA, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_PANACEA));
-	public static Item item_flowertea_corm             = new ItemFlowerTea(EnumFlowerHalb.CORM, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_CORM));
+	public static Item item_flowertea_corm             = new ItemFlowerTea(EnumFlowerHalb.CORN, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_CORM));
+	public static Item item_flowertea_lily             = new ItemFlowerTea(EnumFlowerHalb.LILY, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_LILY));
 	public static Item item_flowertea_witherrose       = new ItemFlowerTea(EnumFlowerHalb.WITHERROSE, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_WITHERROSE));
 	public static Item item_flowertea_coral            = new ItemFlowerTea(EnumFlowerHalb.CORAL, new Item.Properties().group( Mod_ManyFoods.tabPieCakes)).setRegistryName(new ResourceLocation(ModCommon.MOD_ID, NAME_TEA_FLOWER_CORAL));
 
@@ -1648,6 +1654,7 @@ public class ItemCore {
 			{put(NAME_DUST_FLOWER_PEONY, item_flowerdust_peony);}
 			{put(NAME_DUST_FLOWER_PANACEA, item_flowerdust_panacea);}
 			{put(NAME_DUST_FLOWER_CORM, item_flowerdust_corm);}
+			{put(NAME_DUST_FLOWER_LILY, item_flowerdust_lily);}
 			{put(NAME_DUST_FLOWER_WITHERROSE, item_flowerdust_witherrose);}
 			{put(NAME_DUST_FLOWER_CORAL, item_flowerdust_coral);}
 
@@ -1664,6 +1671,7 @@ public class ItemCore {
 			{put(NAME_TEA_FLOWER_PEONY, item_flowertea_peony);}
 			{put(NAME_TEA_FLOWER_PANACEA, item_flowertea_panacea);}
 			{put(NAME_TEA_FLOWER_CORM, item_flowertea_corm);}
+			{put(NAME_TEA_FLOWER_LILY, item_flowertea_lily);}
 			{put(NAME_TEA_FLOWER_WITHERROSE, item_flowertea_witherrose);}
 			{put(NAME_TEA_FLOWER_CORAL, item_flowertea_coral);}
 
@@ -1851,9 +1859,10 @@ public class ItemCore {
 		PEONY(10,10,"peony",new Effect[]{null},ItemCore.item_flowerdust_peony, ItemCore.item_flowertea_peony),
 		PANACEA(11,11,"panacea",new Effect[]{Effects.BLINDNESS,Effects.NAUSEA,Effects.MINING_FATIGUE,
 				Effects.HUNGER,Effects.SLOWNESS,Effects.UNLUCK,Effects.WEAKNESS,Effects.WITHER},ItemCore.item_flowerdust_panacea, ItemCore.item_flowertea_panacea),
-		CORM(12,12,"corm",new Effect[]{Effects.POISON},300, 0,ItemCore.item_flowerdust_corm, ItemCore.item_flowertea_corm,false),
-		WITHERROSE(13,13,"witherrose",new Effect[]{Effects.WITHER}, ItemCore.item_flowerdust_witherrose, ItemCore.item_flowertea_witherrose),
-		CORAL(14,14,"coral", new Effect[] {Effects.WATER_BREATHING},1200, 0,ItemCore.item_flowerdust_coral, ItemCore.item_flowerdust_coral,false);
+		LILY(12,12,"lily",new Effect[]{Effects.BAD_OMEN},ItemCore.item_flowerdust_lily, ItemCore.item_flowertea_lily),
+		CORN(13,13,"corn",new Effect[]{Effects.POISON},300, 0,ItemCore.item_flowerdust_corm, ItemCore.item_flowertea_corm,false),
+		WITHERROSE(14,15,"witherrose",new Effect[]{Effects.WITHER}, ItemCore.item_flowerdust_witherrose, ItemCore.item_flowertea_witherrose),
+		CORAL(15,15,"coral", new Effect[] {Effects.WATER_BREATHING},1200, 0,ItemCore.item_flowerdust_coral, ItemCore.item_flowerdust_coral,false);
 
 
 		private int index;
@@ -1888,7 +1897,7 @@ public class ItemCore {
 			tea = item2;
 		}
 
-		public static final EnumFlowerHalb[] values = {DANDELION,POPY,ORCHID,ALLIUM,AZUREBLUET,TULIP,OXEYDAISY,SUNFLOWER,LILAC,ROSE,PEONY,PANACEA,CORM,WITHERROSE};
+		public static final EnumFlowerHalb[] values = {DANDELION,POPY,ORCHID,ALLIUM,AZUREBLUET,TULIP,OXEYDAISY,SUNFLOWER,LILAC,ROSE,PEONY,PANACEA,CORN,WITHERROSE};
 
 		public int getIndex(){return this.index;}
 		public int getDamage(){return this.damage;}

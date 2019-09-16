@@ -42,6 +42,8 @@ public class OriginalRecipie {
 		addRecipie(new ItemStack(Blocks.AZURE_BLUET,1), new ItemStack(ItemCore.item_flowerdust_azurebluet,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.OXEYE_DAISY,1), new ItemStack(ItemCore.item_flowerdust_oxeydaisy,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(Blocks.POPPY,1), new ItemStack(ItemCore.item_flowerdust_popy,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
+		addRecipie(new ItemStack(Blocks.LILY_OF_THE_VALLEY,1), new ItemStack(ItemCore.item_flowerdust_lily,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
+
 
 		addRecipie(new ItemStack(BlockCore.block_cow), new ItemStack(ItemCore.item_millbeef,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
 		addRecipie(new ItemStack(BlockCore.block_pig), new ItemStack(ItemCore.item_millpoke,1), ORIGINAL_RECIPIES.RECIPIE_MILLING);
