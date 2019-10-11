@@ -195,16 +195,18 @@ public class BlockSaltPan extends ContainerBlock {
 
     @Override
     public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
-    	int level = (int)state.getValues().get(LEVEL);
-    	if (level == 2){
-        	TileEntity tileentity = worldIn.getTileEntity(pos);
-        	if (tileentity != null && tileentity instanceof TileEntitySaltPan){
-    			InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileentity);
-    			((TileEntitySaltPan) tileentity).clear();
-    			worldIn.updateComparatorOutputLevel(pos, this);
-        	}
+    	if (state.getBlock() != newState.getBlock()) {
+    		int level = (int)state.getValues().get(LEVEL);
+    		if (level == 2){
+    			TileEntity tileentity = worldIn.getTileEntity(pos);
+    			if (tileentity != null && tileentity instanceof TileEntitySaltPan){
+    				InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileentity);
+    				((TileEntitySaltPan) tileentity).clear();
+    				worldIn.updateComparatorOutputLevel(pos, this);
+    			}
+    		}
+    		super.onReplaced(state,worldIn, pos, newState,isMoving);
     	}
-        super.onReplaced(state,worldIn, pos, newState,isMoving);
     }
 
 

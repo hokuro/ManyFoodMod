@@ -174,14 +174,15 @@ public class BlockIceCrasher extends BlockHorizontalContainer {
 
     @Override
     public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
-        TileEntity tileentity = worldIn.getTileEntity(pos);
+    	if (state.getBlock() != newState.getBlock()) {
+    		TileEntity tileentity = worldIn.getTileEntity(pos);
 
-        if (tileentity instanceof TileEntityIceCrasher)
-        {
-            InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileentity);
-            worldIn.updateComparatorOutputLevel(pos, this);
-        }
-        super.onReplaced(state,worldIn, pos, newState, isMoving);
+    		if (tileentity instanceof TileEntityIceCrasher) {
+    			InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileentity);
+    			worldIn.updateComparatorOutputLevel(pos, this);
+    		}
+    		super.onReplaced(state,worldIn, pos, newState, isMoving);
+    	}
     }
 
     @Override

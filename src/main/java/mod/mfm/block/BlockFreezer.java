@@ -26,7 +26,6 @@ import net.minecraftforge.fml.network.NetworkHooks;
 
 public class BlockFreezer extends BlockHorizontalContainer {
 
-    private static boolean keepInventory;
     private static final AxisAlignedBB[] colligeBox =  new AxisAlignedBB[] {
     		new AxisAlignedBB(0D, 0D, 0D, 0D, 0D, 0D), // 不使用
     		new AxisAlignedBB(0D, 0D, 0D, 0D, 0D, 0D), // 不使用
@@ -138,12 +137,9 @@ public class BlockFreezer extends BlockHorizontalContainer {
 
     @Override
     public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!keepInventory)
-        {
+        if (state.getBlock() != newState.getBlock()) {
             TileEntity tileentity = worldIn.getTileEntity(pos);
-
-            if (tileentity instanceof TileEntityFreezer)
-            {
+            if (tileentity instanceof TileEntityFreezer) {
                 InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileentity);
                 worldIn.updateComparatorOutputLevel(pos, this);
             }
